@@ -52,7 +52,7 @@ One way to set this up is like the following:
 served from this server)
 * `API server` -- your back-end (API), if any  
 * `spa-ssr-proxy` -- this proxy
-* `CDN / reverse proxy server` -- the servers your users will actually be served by
+* `CDN / reverse proxy server` -- the server your users will be actually served by
 
 `CDN / reverse proxy server` needs to be configured to split the traffic:
 * API requests should be routed to your API server
