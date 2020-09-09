@@ -98,8 +98,7 @@ It's configured by `pageConfig.waitSelector`.
 The value in the template is `title#title` - which means the page is considered rendered as soon as there is a 
 `<title>` element with `id=title` (you can tweak your APP to do that when it knows it has finished rendering).
 
-For the pre-render (which uses the `history` API to navigate through the specified list of pages) we need a way
-to clear this "signal". This is specified by `pageConfig.resetSelectorScript`, in the template it's set to this:
+For the pre-render (which will work the fastest if the `history` API is used to navigate through the specified list of pages, as the headless browser will not re-load/re-run the whole scrip) we need a way to clear the above "completion signal". This is specified by `pageConfig.resetSelectorScript`, in the template it's set to this:
 
 ```
 document.head.querySelector('title').removeAttribute('id')
